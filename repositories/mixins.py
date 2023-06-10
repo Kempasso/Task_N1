@@ -32,9 +32,9 @@ class CreateMixin(BaseMixin):
 @dataclass
 class GetMixin(BaseMixin):
 
-    def get_by_values(self, **values):
+    def get_by_values(self, **kwargs):
         with self.session_maker() as session:
-            query = session.query(self.table).filter_by(**values)
+            query = session.query(self.table).filter_by(**kwargs)
             result = query.all()
             return result
 

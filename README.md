@@ -11,11 +11,11 @@
 
 Сборка приложения
 ```bash
-docker-compose build
+sudo docker-compose build
 ```
 ### Запуск приложения:
 ```bash
-docker-compose up
+sudo docker-compose up
 ```
 
 ### Пример POST запроса

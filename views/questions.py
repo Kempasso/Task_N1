@@ -19,7 +19,7 @@ class QuestionsView(Resource):
         last_question = questions_service.get_last_question()
         questions = questions_service.get_questions_from_external_api(count=data["questions_num"])
 
-        questions_service.some(questions)
+        questions_service.iteration_by_questions(questions)
         if last_question:
             return question_schema.dump(last_question), 200
         return {}

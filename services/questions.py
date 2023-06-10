@@ -24,7 +24,7 @@ class QuestionsService:
         question_instance = self.repo.create(**kwargs)
         return question_instance
 
-    def some(self, questions: list[dict]):
+    def iteration_by_questions(self, questions: list[dict]):
         for question in questions:
             check_result = self.check_exist_question(question)
             if not check_result:
