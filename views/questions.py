@@ -5,10 +5,11 @@ from flask_restx import Resource, Namespace
 from config import QUESTIONS_API
 from services import questions_service
 from tables import QuestionSchema
+from marshmallow import Schema
 
 questions_namespace = Namespace('')
 
-question_schema = QuestionSchema()
+question_schema: Schema = QuestionSchema()
 
 
 @questions_namespace.route('/questions')
