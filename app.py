@@ -4,12 +4,11 @@ from flask_restx import Api
 
 from views.questions import questions_namespace
 from config import Config
-from repositories import create_t, questions_repo
-from tables import *
+from repositories import create_t
 
 
 def create_app(config: Config) -> Flask:
-    application = Flask(__name__)
+    application: Flask = Flask(__name__)
     application.config.from_object(config)
     application.app_context().push()
     return application
